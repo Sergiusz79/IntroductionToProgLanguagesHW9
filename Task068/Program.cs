@@ -15,33 +15,22 @@ int EnterNumber(string text)
 }
 
 
-
-// string WriteIntegersN(int m, int n)
-// {
-//     if (m < n) return $"{m} " + WriteIntegers(m + 1, n);
-
-//     else return $"{m}";
-
-//     //if (m > n) return n + WriteIntegers(m, n + 1);
-// } 
-
-int WriteIntegers(int m, int n)
+int Akerman(int n, int m)
 {
-    if (m < n) return m + WriteIntegers(m + 1, n);
-    if (m > n) return n + WriteIntegers(m, n + 1);
-    else return m;
-
-    //if (m > n) return n + WriteIntegers(m, n + 1);
-} 
+    if (n == 0) return m + 1;
+    if ((n != 0) && (m == 0)) return Akerman(n - 1, 1);
+    else return Akerman(n - 1, Akerman(n, m - 1));
+}
 
 
 
-void Task066()
+
+void Task068()
 {
     int m = EnterNumber("Please enter first number:> ");
     int n = EnterNumber("Please enter second number:> ");
 
-    System.Console.WriteLine(WriteIntegers(m, n));
+    Console.WriteLine($" Resalt:  {Akerman(m, n)}");
 }
 
-Task066();
+Task068();

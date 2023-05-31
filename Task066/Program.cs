@@ -32,7 +32,7 @@ void Task066()
     int m = EnterNumber("Please enter first number:> ");
     int n = EnterNumber("Please enter second number:> ");
 
-    System.Console.WriteLine(WriteIntegers(m, n));
+    Console.WriteLine(WriteIntegers(m, n));
 }
 
 Task066();
