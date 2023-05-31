@@ -21,8 +21,6 @@ int WriteIntegers(int m, int n)
     if (m < n) return m + WriteIntegers(m + 1, n);
     if (m > n) return n + WriteIntegers(m, n + 1);
     else return m;
-
-    //if (m > n) return n + WriteIntegers(m, n + 1);
 } 
 
 
