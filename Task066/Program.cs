@@ -16,16 +16,6 @@ int EnterNumber(string text)
 }
 
 
-
-// string WriteIntegersN(int m, int n)
-// {
-//     if (m < n) return $"{m} " + WriteIntegers(m + 1, n);
-
-//     else return $"{m}";
-
-//     //if (m > n) return n + WriteIntegers(m, n + 1);
-// } 
-
 int WriteIntegers(int m, int n)
 {
     if (m < n) return m + WriteIntegers(m + 1, n);
